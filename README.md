@@ -7,6 +7,8 @@ A series of benchmarks to gage pain points during the fraud proof construction p
 
 ## Running the Benchmarks
 
+First, install the [SP1 toolchain](https://succinctlabs.github.io/sp1/getting-started/install.html) then clone the repo and run the following...
+
 ```
 cd script
 RUSTFLAGS="-Ctarget-cpu=native" cargo run --release
