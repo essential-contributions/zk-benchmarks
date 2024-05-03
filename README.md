@@ -19,6 +19,13 @@ The flag `RUSTFLAGS="-Ctarget-cpu=native"` ensures the prover takes advantage of
 ### Results
 
 ```
+Intel Core i7-1260P - May 3rd, 2024
+
+5.84s to prove a hash of 8k bytes
+47.39s to prove an ed25519 signature
+49.87s to prove a sparse merkle tree proof
+```
+```
 Intel Core i7-8700 3.2GHz - May 3rd, 2024
 
 4.23s to prove a hash of 8k bytes
@@ -28,7 +35,7 @@ Intel Core i7-8700 3.2GHz - May 3rd, 2024
 ```
 Intel Core i7-13700K - May 3rd, 2024
 
-1.739827381s to prove a hash of 8k bytes
-13.446777386s to prove an ed25519 signature
-9.922063673s to prove a sparse merkle tree proof
+1.74s to prove a hash of 8k bytes
+13.45s to prove an ed25519 signature
+9.92s to prove a sparse merkle tree proof
 ```
