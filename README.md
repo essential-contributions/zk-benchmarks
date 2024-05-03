@@ -25,3 +25,10 @@ Intel Core i7-8700 3.2GHz - May 3rd, 2024
 37.65s to prove an ed25519 signature
 27.05s to prove a sparse merkle tree proof
 ```
+```
+Intel Core i7-13700K - May 3rd, 2024
+
+1.739827381s to prove a hash of 8k bytes
+13.446777386s to prove an ed25519 signature
+9.922063673s to prove a sparse merkle tree proof
+```
