@@ -1,21 +1,26 @@
-#![no_main]
+//! A simple program that runs a benchmark category for a given number of times.
 
+// These two lines are necessary for the program to properly compile.
+//
+// Under the hood, we wrap your main function with some extra code so that it behaves properly
+// inside the zkVM.
+#![no_main]
 sp1_zkvm::entrypoint!(main);
 
 use ed25519_dalek::{Signature, VerifyingKey};
 use sha2::{Digest, Sha256};
-use op_benchmarks_core::Outputs;
+use zk_benchmarks_core::Outputs;
 
 const OP_HASH_8K: u8 = 0;
 const OP_SIGNATURE: u8 = 1;
 const OP_SMT_PROOF: u8 = 2;
 
-fn main() {
-    // get input
+pub fn main() {
+    // Read an input to the program.
     let input = sp1_zkvm::io::read_vec();
     let op = input[0];
 
-    // execute op
+    // Execute OP.
     if op == OP_HASH_8K {
         sp1_zkvm::io::commit(&execute_hash_8k(input.as_slice()));
     } else if op == OP_SIGNATURE {

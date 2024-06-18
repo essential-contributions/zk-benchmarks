@@ -1,15 +1,24 @@
 [workspace]
 [package]
 version = "0.1.0"
-name = "op_benchmarks-script"
+name = "zk-benchmarks-script"
 edition = "2021"
+
+[[bin]]
+name = "prove"
+path = "src/bin/prove.rs"
 
 [dependencies]
 sha2 = "0.10.8"
 ed25519-dalek = "2.1.1"
 hex = "0.4.3"
-op-benchmarks-core = { path = "../core" }
-sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git" }
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", tag = "v1.0.7-testnet" }
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+clap = { version = "4.0", features = ["derive", "env"] }
+tracing = "0.1.40"
+alloy-sol-types = "0.7.2"
+zk-benchmarks-core = { path = "../core" }
 
 [build-dependencies]
-sp1-helper = { git = "https://github.com/succinctlabs/sp1.git" }
+sp1-helper = { git = "https://github.com/succinctlabs/sp1.git", tag = "v1.0.7-testnet" }

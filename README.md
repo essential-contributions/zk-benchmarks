@@ -11,10 +11,18 @@ First, install the [SP1 toolchain](https://succinctlabs.github.io/sp1/getting-st
 
 ```
 cd script
-RUSTFLAGS="-Ctarget-cpu=native" cargo run --release
+RUSTFLAGS="-Ctarget-cpu=native" cargo run --bin prove --release
 ```
 
 The flag `RUSTFLAGS="-Ctarget-cpu=native"` ensures the prover takes advantage of vector based instructions.
+
+### Full EVM verification
+Optionally run the benchmark with the `--evm` flag to test wrapping for verification on Ethereum. You will need somewhere in the range of 128GB of RAM to execute this option.
+
+```
+cd script
+RUSTFLAGS="-Ctarget-cpu=native" cargo run --bin prove --release -- --evm
+```
 
 ### Results
 
@@ -47,7 +55,7 @@ Intel Core i7-13700K - May 3rd, 2024
 9.92s to prove a sparse merkle tree proof
 ```
 
-#### AWS (mid range)
+#### AWS (entry level)
 
 ```
 c6i.2xlarge	($0.34)	8vCPU	16GiB - May 31st, 2024
@@ -71,7 +79,7 @@ c6g.2xlarge	($0.27)	8vCPU	16GiB - May 31st, 2024
 32.95s to prove a sparse merkle tree proof
 ```
 
-#### AWS (high end)
+#### AWS (mid-high range)
 
 ```
 c6a.8xlarge	($1.22)	32vCPU	64GiB - May 31st, 2024
@@ -87,3 +95,10 @@ c6i.8xlarge	($1.36)	32vCPU	64GiB - May 31st, 2024
 9.17s to prove an ed25519 signature
 9.78s to prove a sparse merkle tree proof
 ```
+
+#### AWS (high range)
+
+
+
+
+

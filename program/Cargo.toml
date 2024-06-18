@@ -1,14 +1,15 @@
 [workspace]
 [package]
 version = "0.1.0"
-name = "op_benchmarks-program"
+name = "zk-benchmarks-program"
 edition = "2021"
 
 [dependencies]
+alloy-sol-types = "0.7.2"
 sha2 = "0.10.8"
 ed25519-dalek = { git = "https://github.com/sp1-patches/curve25519-dalek", branch = "patch-v4.1.1" }
-op-benchmarks-core = { path = "../core" }
-sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git" }
+sp1-zkvm = { git = "https://github.com/succinctlabs/sp1.git", tag = "v1.0.7-testnet" }
+zk-benchmarks-core = { path = "../core" }
 
 [patch.crates-io]
 sha2-v0-10-8 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha2", branch = "patch-v0.10.8" }
