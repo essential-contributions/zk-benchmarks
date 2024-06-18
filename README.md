@@ -96,9 +96,26 @@ c6i.8xlarge	($1.36)	32vCPU	64GiB - May 31st, 2024
 9.78s to prove a sparse merkle tree proof
 ```
 
-#### AWS (high range)
+#### AWS (after SP1 v1 update)
 
+```
+c6a.16xlarge ($2.44) 64vCPU	128GiB - June 18th, 2024
 
+2.38s to prove a hash of 8k bytes
+16.82s to prove an ed25519 signature
+16.44s to prove a sparse merkle tree proof
+```
+```
+c6a.32xlarge ($4.89) 128vCPU 256GiB - June 18th, 2024
 
+2.50s to prove a hash of 8k bytes
+16.72s to prove an ed25519 signature
+15.87s to prove a sparse merkle tree proof
+```
+```
+c6a.48xlarge ($7.34) 192vCPU 384GiB - June 18th, 2024
 
-
+2.48s to prove a hash of 8k bytes
+15.91s to prove an ed25519 signature
+16.22s to prove a sparse merkle tree proof
+```
